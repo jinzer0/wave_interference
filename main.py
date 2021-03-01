@@ -32,6 +32,9 @@ for a in np.arange(1, 50, 0.1):
     line3.set_ydata(Sinfunc(x, a, 1) + Sinfunc(x, -a, b))
     line4.set_ydata(Sinfunc(x, a, 1) + Sinfunc(x, -a, 1))
 
+    if b > 1:
+        b -= 0.01
+
     fig.canvas.draw()
     plt.legend(loc=1)
     plt.show()
